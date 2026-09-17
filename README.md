@@ -194,22 +194,10 @@ colcon build --packages-select slam_robot_test
 source install/setup.bash
 ```
 
-Start the complete simulation:
+Start the simulation:
 
 ```bash
 ros2 launch slam_robot_test robot.launch.py
-```
-
-For a stationary-wall run:
-
-```bash
-ros2 launch slam_robot_test robot_static_wall.launch.py
-```
-
-To run without the moving-wall controller:
-
-```bash
-ros2 launch slam_robot_test robot_no_wall.launch.py
 ```
 
 The full launch records all ROS topics to a timestamped directory under
@@ -239,5 +227,3 @@ logs/diagnostics.csv
 logs/summary_plot.png
 logs/assignment_bag_*/       # rosbag2 recording, if enabled
 ```
-- Delete old CSV files or select a new `output_dir` before a fresh evidence
-  run so that results are not mixed with an earlier run.
